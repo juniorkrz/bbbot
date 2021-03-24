@@ -12,7 +12,7 @@ class BBBot:
         self.fails = 0
         self.url = 'https://gshow.globo.com/realities/bbb/bbb21/votacao/paredao-bbb21-vote-para-eliminar-carla-diaz-fiuk-ou-rodolffo-6c4bd3d7-da53-40a1-b77d-8436b1230ed9.ghtml'
         options = webdriver.ChromeOptions()
-        #options.add_argument("user-data-dir=globo") #Path to your chrome profile
+        options.add_argument("user-data-dir=globo") #Path to your chrome profile
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option('useAutomationExtension', False)
         options.add_argument("--disable-blink-features=AutomationControlled")
@@ -87,4 +87,5 @@ os.system('cls')
 start = input(' [ BBBOT ] Realize o login e pressione ENTER...')
 print(' [ BBBOT ] Iniciando...')
 bot.driver.get(bot.url)
+sleep(1)
 bot.vote_loop()
