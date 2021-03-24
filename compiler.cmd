@@ -1,0 +1,3 @@
+echo Compiling BBBOT...
+pyinstaller --onefile --i icon.ico -F --add-binary "chromedriver.exe";"." bbbot.py
+pause

@@ -1,0 +1,5 @@
+/globo
+/dist
+/build
+*.spec
+*.pyc
